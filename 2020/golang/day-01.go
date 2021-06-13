@@ -8,10 +8,10 @@ import (
 
 // Part 1
 func part1(input []int) (result int) {
-    for index1, num1 := range input {
-        for index2, num2 := range input {
-            if ((index2 > index1) && ((num1 + num2) == 2020)) {
-                result = num1 * num2
+    for index1 := 0; index1 < len(input); index1++ {
+        for index2 := index1 + 1; index2 < len(input); index2++ {
+            if (input[index1] + input[index2] == 2020) {
+                result = (input[index1]) * (input[index2])
                 break
             }
         }
@@ -21,11 +21,11 @@ func part1(input []int) (result int) {
 
 // Part 2
 func part2(input []int) (result int) {
-    for index1, num1 := range input {
-        for index2, num2 := range input {
-            for index3, num3 := range input {
-                if ((index3 > index2) && (index2 > index1) && ((num1 + num2 + num3) == 2020)) {
-                    result = num1 * num2 * num3
+    for index1 := 0; index1 < len(input); index1++ {
+        for index2 := index1 + 1; index2 < len(input); index2++ {
+            for index3 := index2 + 1; index3 < len(input); index3++ {
+                if (input[index1] + input[index2] + input[index3] == 2020) {
+                    result = (input[index1]) * (input[index2]) * (input[index3])
                     break
                 }
             }
