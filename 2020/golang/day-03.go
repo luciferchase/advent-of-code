@@ -42,5 +42,5 @@ func main() {
         result *= bothParts(args[0], args[1], input)
     }
     fmt.Println(result)
-    // [Finished in 1.6s]
+    // [Finished in 532.3µs]
 }
