@@ -50,5 +50,5 @@ func main() {
     // Print answer
     fmt.Println(part1(input))
     fmt.Println(part2(input))
-    // [Finished in 1.7s]
+    // [Finished in 368.0393ms]
 }
