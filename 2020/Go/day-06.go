@@ -74,4 +74,5 @@ func main() {
     // Print answers
     fmt.Println(part1(groups))
     fmt.Println(part2(groups))
+    // [Finished in 8.0421ms]
 }
