@@ -11,13 +11,13 @@ def colours_relation(_input):
     relation = {}
 
     for rule in _input:
-        base_colour = " ".join([rule[0], rule[1]])
+        base_colour = " ".join(rule[:2])
         relation[base_colour] = {}
         
         for i in range(len(rule)):
             match = re.match(r"\d", rule[i])
             if match:
-                relation[base_colour][" ".join([rule[i + 1], rule[i + 2]])] = int(rule[i])
+                relation[base_colour][" ".join(rule[i + 1:i + 3])] = int(rule[i])
     return relation
 
 def part_1(_input):
@@ -39,6 +39,7 @@ def part_1(_input):
     return count
 
 # Part 2
+# Recursively add all the inside bags
 def add_no_of_bag(relation, colour):
     count = 0
     if not relation[colour]:
@@ -60,3 +61,4 @@ def part_2(_input):
 relation = colours_relation(_input)
 print(part_1(relation))
 print(part_2(relation))
+# [Finished in 501ms]
